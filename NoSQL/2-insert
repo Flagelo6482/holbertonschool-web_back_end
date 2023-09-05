@@ -1,4 +1,2 @@
 // Insert document
-use my_db
-db.createCollection('school')
 db.school.insert({"name":"Holberton school"})
