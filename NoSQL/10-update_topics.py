@@ -11,4 +11,4 @@ def update_topics(mongo_collection, name, topics):
     """
     filtro = {"name": name}
     valor = {"$set": {"topics": topics}}
-    mongo_collection.update_one(filtro, valor)
+    mongo_collection.update_many(filtro, valor)
