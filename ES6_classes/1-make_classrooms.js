@@ -5,7 +5,7 @@ export default function initializeRooms() {
   const numbers = [19, 20, 34];// Numeros a pasar a la clase 'ClassRoom'
 
   for (const i in numbers) { // Iteramos en los números
-    if (numbers.hasOwnProperty(i)) {
+    if (Object.prototype.hasOwnProperty.call(numbers, i)) {
       const newObject = new ClassRoom(numbers[i]);
       x[i] = newObject;
     }
