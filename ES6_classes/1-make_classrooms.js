@@ -1,14 +1,14 @@
-import ClassRoom from "./0-classroom";
+import ClassRoom from './0-classroom';
 
 export default function initializeRooms() {
-  let x = new Array(3);   // Array de objetos que retornaremos
-  let numbers = [19, 20, 34]  // Numeros a pasar a la clase 'ClassRoom'
+  const x = new Array(3);// Array de objetos que retornaremos
+    const numbers = [19, 20, 34];// Numeros a pasar a la clase 'ClassRoom'
 
-  for (let i in numbers) {    // Iteramos en los números
-        // console.log(numbers[i])
-    let new_object = new ClassRoom(numbers[i]);
-    x[i] = new_object;
-        // console.log(x)
+  for (const i in numbers) {// Iteramos en los números
+    // console.log(numbers[i])
+    const newObject = new ClassRoom(numbers[i]);
+    x[i] = newObject;
+    // console.log(x)
   }
   return x;
 }
