@@ -1,5 +1,4 @@
-import ClassRoom from "./0-classroom.js";
-
+import ClassRoom from "./0-classroom";
 
 export default function initializeRooms() {
   let x = new Array(3);   // Array de objetos que retornaremos
