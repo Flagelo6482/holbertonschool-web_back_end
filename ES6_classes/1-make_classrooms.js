@@ -5,12 +5,10 @@ export default function initializeRooms() {
   const numbers = [19, 20, 34];// Numeros a pasar a la clase 'ClassRoom'
 
   for (const i in numbers) { // Iteramos en los números
-    // console.log(numbers[i])
-      if (numbers.hasOwnProperty(i)) {
-	const newObject = new ClassRoom(numbers[i]);
-        x[i] = newObject;
-        // console.log(x)
-      }
+    if (numbers.hasOwnProperty(i)) {
+      const newObject = new ClassRoom(numbers[i]);
+      x[i] = newObject;
+    }
   }
   return x;
 }
