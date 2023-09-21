@@ -19,7 +19,7 @@ export default class HolbertonCourse {
             console.log(error);
         }
 	try {
-            if (!Array.isArray("students")) {
+            if (Array.isArray(students) && students.every((elemento) => typeof elemento !== "string")) {
                 throw new TypeError("Students must be a string");
             }
             this._students = students;
@@ -64,7 +64,7 @@ export default class HolbertonCourse {
     }
     set students(value) {
 	try {
-            if (!Array.isArray("value")) {
+	    if (Array.isArray(students) && students.every((elemento) => typeof elemento !== "string")) {
                 throw new TypeError("Students must be a string");
             }
             this._students = value;
