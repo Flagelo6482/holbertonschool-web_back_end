@@ -18,7 +18,14 @@ export default class HolbertonCourse {
         catch(error) {
             console.log(error);
         }
-        this._students = students;
+	try {
+            if (!Array.isArray("students")) {
+                throw new TypeError("Students must be a string");
+            }
+            this._students = students;
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     get name() {
@@ -56,6 +63,13 @@ export default class HolbertonCourse {
         return this._students;
     }
     set students(value) {
-        this._students = value;
+	try {
+            if (!Array.isArray("value")) {
+                throw new TypeError("Students must be a string");
+            }
+            this._students = value;
+        } catch (error) {
+            console.error(error);
+        }
     }
 }
