@@ -64,10 +64,10 @@ export default class HolbertonCourse {
     }
     set students(value) {
 	try {
-            if (typeof value !== "string") {
-                throw new TypeError("Students must be a string");
+            if (!Array.isArray(value)) {
+                throw new TypeError("Students must be a string!");
             }
-            this.students.push(value);
+            this._students = value;
         }
         catch(error) {
             console.log(error);
